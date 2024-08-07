@@ -10,6 +10,12 @@ pipeline {
                 echo 'Hi Rajesh !!!!'
             }
         }
+        stage('Git checkout'){
+           steps {
+                git 'https://github.com/RajeshDuraisamy18/Youtube_example'      
+           }
+      
+    }
         stage('Maven Build') {
             steps {
                 sh 'mvn clean package'
