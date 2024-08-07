@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment{
-        PATH+EXTRA = '/apache-maven-3.9.8/bin/mvn'
+        PATH = '/maven3/bin:$PATH'
     }    
     stages {
         stage('Welcome to Jenkins pipeline') {
