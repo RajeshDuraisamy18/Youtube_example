@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    environment{
+        PATH = '/apache-maven-3.9.8/bin/mvn:$PATH'
+    }    
+    stages {
+        stage('Welcome to Jenkins pipeline') {
+            steps {
+                echo 'Hi Rajesh !!!!'
+            }
+        }
+        stage('Maven Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
