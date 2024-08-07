@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment{
-        PATH = '/root/apache-maven-3.9.8/bin:$PATH'
+        PATH = '/root@ip-172-31-10-105/apache-maven-3.9.8/bin:$PATH'
     }    
     stages {
         stage('Welcome to Jenkins pipeline') {
